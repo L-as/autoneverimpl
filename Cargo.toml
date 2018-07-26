@@ -1,0 +1,21 @@
+cargo-features = ["edition"]
+
+[package]
+name = "autoneverimpl"
+version = "0.1.0"
+authors = ["Las <las@protonmail.ch>"]
+license = "MPL-2.0"
+readme = "README.md"
+description = "A procedural macro to automatically generate an implementation of your trait for !"
+keywords = ["macro", "trait", "never-type"]
+categories = ["development-tools::procedural-macro-helpers"]
+edition = "2018"
+
+[dependencies]
+syn = {version = "0.14", features = ["full"]}
+quote = "0.6"
+proc-macro2 = {version = "0.4.6", features = ["nightly"]}
+
+[lib]
+proc-macro = true
+path = "lib.rs"
